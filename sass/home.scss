@@ -59,6 +59,7 @@
 /* ----Restaurant-Section------ */
 /* ---------------------------- */
 .restaurant-section {
+    width:100%;
     background-color: variables.$clr-grey-2;
 }
 
@@ -185,7 +186,7 @@ color:hsl(variables.$clr-primary);
     }
 
     .restaurant-content > * {
-        /* flex-basis:100%; */
+        //  flex-basis:100%; 
         max-width:calc((100% - 6rem) / 4);
     }
 }
