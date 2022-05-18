@@ -1,3 +1,463 @@
+@charset "UTF-8";
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
+/* list style */
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+/* links style */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+/* Set up the body */
+body {
+  font-family: "Roboto", serif;
+  padding: 0;
+}
+
+/* make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* make forms elements easier to work with */
+button {
+  font: inherit;
+}
+
+/* flex */
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+/* column */
+.column {
+  flex-direction: column;
+}
+
+/* absolute */
+.absolute {
+  position: absolute;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+/* button */
+.btn {
+  cursor: pointer;
+  width: fit-content;
+  border: none;
+  border-radius: 4rem;
+  padding: 1rem 1.5rem;
+  margin-block: 1.5rem;
+  color: white;
+  background: linear-gradient(to top, #9256dc, #FF79DA);
+}
+
+/* vignette */
+.vignette {
+  position: relative;
+  padding: 1.5rem 2rem;
+  margin-left: 0.7rem;
+  border-radius: 20px;
+  background-color: #F6F6F6;
+}
+.vignette:hover {
+  background-color: rgba(146, 86, 220, 0.2);
+}
+.vignette:hover i {
+  color: #9256dc;
+}
+.vignette .vignette-counter {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateX(-50%) translateY(-50%);
+  width: 1.5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  color: white;
+  background-color: #9256dc;
+}
+
+/* card */
+.card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: white;
+}
+.card .badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  color: #018766;
+  background-color: #99E2D0;
+}
+
+section {
+  padding: 3rem 1.5rem;
+}
+
+/* footer */
+footer {
+  padding: 1.5rem;
+  padding-bottom: 2.5rem;
+}
+
+/* ---------------------------- */
+/* -------Header--------------- */
+/* ---------------------------- */
+.main-header {
+  /* Location container */
+}
+.main-header .logo-container {
+  position: relative;
+  padding: 1rem;
+  padding-top: 1.5rem;
+}
+.main-header .logo {
+  width: 50%;
+  max-width: 13rem;
+}
+.main-header .location-container {
+  padding: 1rem;
+  background-color: #EAEAEA;
+}
+
+/* ---------------------------- */
+/* -------Main content--------- */
+/* ---------------------------- */
+.main-content {
+  --gap:0;
+}
+
+/* ---------------------------- */
+/* -------Head-Section--------- */
+/* ---------------------------- */
+/* head-section */
+.head-section {
+  justify-content: start;
+  text-align: center;
+  background-color: #F6F6F6;
+}
+
+/* ---------------------------- */
+/* -------Function-Section----- */
+/* ---------------------------- */
+.function-section,
+.restaurant-section {
+  --gap:1.5rem;
+}
+
+/* ---------------------------- */
+/* ----Restaurant-Section------ */
+/* ---------------------------- */
+.restaurant-section {
+  width: 100%;
+  background-color: #F6F6F6;
+}
+.restaurant-section .card-img {
+  overflow: hidden;
+  height: 15rem;
+}
+.restaurant-section .card-content {
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+}
+
+.card-like {
+  position: relative;
+}
+.card-like * {
+  color: #9256dc;
+  font-size: 30px;
+  margin-right: 1rem;
+}
+.card-like .filling {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  transition: 0.3s;
+  transform: scale(0);
+  transform-origin: bottom;
+}
+.card-like:hover .filling {
+  transform: scale(0.9);
+}
+
+/* ---------------------------- */
+/* ----------Footer------------ */
+/* ---------------------------- */
+.main-footer {
+  background-color: #353535;
+}
+.main-footer .svg-logo {
+  width: 1rem;
+}
+.main-footer .footer-links {
+  margin-top: 1rem;
+  --gap:0.5rem;
+}
+.main-footer .footer-links * {
+  color: white;
+}
+.main-footer .footer-links i {
+  margin-right: 1rem;
+}
+.main-footer .footer-links .fa-hands-helping {
+  font-size: 10px;
+}
+
+@media (min-width: 768px) {
+  .main-content:not(.menu-main-content) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    --gap:2rem;
+  }
+
+  .head-section {
+    background-color: white;
+    width: calc((100% - 2rem) / 2);
+    order: 2;
+  }
+
+  .head-section {
+    justify-content: space-between;
+  }
+
+  .head-section button {
+    margin-block: 0;
+  }
+
+  .function-section {
+    order: 1;
+    width: calc((100% - 2rem) / 2);
+  }
+
+  .restaurant-section {
+    order: 3;
+  }
+  .restaurant-section .restaurant-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .restaurant-section .restaurant-content > * {
+    flex-basis: 100%;
+    max-width: calc((100% - 2rem) / 2);
+  }
+  .restaurant-section .restaurant-content img {
+    height: 100%;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .head-section {
+    background-color: white;
+    width: calc((100% - 2rem) / 2);
+    order: 1;
+  }
+
+  .function-section {
+    order: 2;
+    width: calc((100% - 2rem) / 2);
+  }
+
+  .restaurant-section .restaurant-content > * {
+    max-width: calc((100% - 6rem) / 4);
+  }
+}
+/* ---------------------------- */
+/* -------Header--------------- */
+/* ---------------------------- */
+.fa-arrow-left {
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+}
+
+.header-img {
+  height: 18rem;
+  overflow: hidden;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+}
+
+#delice {
+  background-image: url(./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+}
+
+#palette {
+  background-image: url(./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+}
+
+#enchante {
+  background-image: url(./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+}
+
+#française {
+  background-image: url(./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+}
+
+/* ---------------------------- */
+/* -------Main content--------- */
+/* ---------------------------- */
+.menu-main-content {
+  background-color: #F6F6F6;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  margin-top: -5rem;
+  padding-block: 2rem;
+  padding-inline: 1rem;
+}
+.menu-main-content section {
+  padding-block: 2rem;
+}
+.menu-main-content .menu-header {
+  justify-content: space-between;
+}
+.menu-main-content .menu-header .menu-title {
+  font-family: "Shrikhand", cursive;
+}
+.menu-main-content .menu-header .filling {
+  top: 0;
+}
+
+/* menu-content */
+.menu-section {
+  padding-inline: 0;
+  --gap:1rem;
+}
+.menu-section .menu-section-title {
+  font-weight: 100;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+.menu-section .green-underline {
+  background-color: #99E2D0;
+  height: 3px;
+  width: 3rem;
+}
+
+/* item */
+.item {
+  position: relative;
+  padding: 1rem;
+  overflow: hidden;
+  max-width: 30rem;
+  border-radius: 1rem;
+  background-color: white;
+  /* item-slide */
+}
+.item .item-text > * {
+  width: 30ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+.item .item-slide {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: -4rem;
+  --gap:0;
+  transition: 0.3s;
+}
+.item:hover .item-slide {
+  right: 0;
+}
+.item:hover .item-text > * {
+  width: 24ch;
+}
+.item:hover .fa-check-circle {
+  transform: rotate(360deg);
+}
+.item .item-price {
+  height: inherit;
+  padding: 1rem;
+  align-items: flex-end;
+}
+.item .item-slide-logo {
+  height: inherit;
+  width: 4rem;
+  align-items: center;
+  justify-content: center;
+  border-bottom-right-radius: 1rem;
+  border-top-right-radius: 1rem;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #99E2D0;
+}
+.item .fa-check-circle {
+  transition: 0.3s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .menu-header {
+    justify-content: center;
+    position: relative;
+  }
+
+  .menu-main-content .card-like {
+    position: absolute;
+    right: 1rem;
+  }
+
+  .menu-main-content .filling {
+    top: -1px;
+  }
+
+  .menu-section {
+    align-items: center;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
