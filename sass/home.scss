@@ -122,3 +122,70 @@ color:hsl(variables.$clr-primary);
 .fa-hands-helping {
     font-size:10px
 }
+
+@media (min-width:768px) {
+    .main-content:not(.menu-main-content) {
+        flex-direction:row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        --gap:2rem;
+    }
+
+    .head-section {
+        background-color: white;
+        width:calc((100% - 2rem) / 2);
+        order:2;
+    }
+
+    .head-section  {
+        justify-content: space-between;
+    }
+
+    .head-section button {
+        margin-block:0;
+    }
+
+    .function-section {
+        order:1;
+        width:calc((100% - 2rem) / 2);
+    }
+
+    .restaurant-section {
+        order:3;
+    }
+
+    .restaurant-content {
+        flex-direction:row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .restaurant-content > * {
+        flex-basis:100%;
+        max-width:calc((100% - 2rem) / 2);
+    }
+
+    .restaurant-content img {
+        height:100%;
+        width:100%;
+    }
+}
+
+@media (min-width:992px) {
+
+    .head-section {
+        background-color: white;
+        width:calc((100% - 2rem) / 2);
+        order:1;
+    }
+
+    .function-section {
+        order:2;
+        width:calc((100% - 2rem) / 2);
+    }
+
+    .restaurant-content > * {
+        /* flex-basis:100%; */
+        max-width:calc((100% - 6rem) / 4);
+    }
+}
