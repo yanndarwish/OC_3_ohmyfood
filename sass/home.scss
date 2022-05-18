@@ -1,0 +1,124 @@
+@use "variables";
+/* ---------------------------- */
+/* -------Header--------------- */
+/* ---------------------------- */
+
+
+/* Logo container */
+.logo-container {
+    position:relative;
+    padding:1rem;
+    padding-top:1.5rem;
+}
+
+.logo {
+    width:50%;
+    max-width:13rem;
+}
+
+/* Location container */
+.location-container {
+    padding:1rem;
+    background-color: variables.$clr-grey-1;
+}
+
+
+
+/* ---------------------------- */
+/* -------Main content--------- */
+/* ---------------------------- */
+
+.main-content {
+    --gap:0;
+}
+
+/* ---------------------------- */
+/* -------Head-Section--------- */
+/* ---------------------------- */
+
+/* head-section */
+.head-section {
+    justify-content: start;
+    text-align: center;
+    background-color: variables.$clr-grey-2;
+}
+
+
+
+
+/* ---------------------------- */
+/* -------Function-Section----- */
+/* ---------------------------- */
+.function-section,
+.restaurant-section {
+    --gap:1.5rem;
+}
+
+
+/* ---------------------------- */
+/* ----Restaurant-Section------ */
+/* ---------------------------- */
+.restaurant-section {
+    background-color: variables.$clr-grey-2;
+}
+
+.card-img {
+    overflow: hidden;
+    height:15rem;
+}
+
+.card-content {
+    justify-content: space-between;
+    padding:1.5rem 1rem;
+}
+
+.card-like {
+    position:relative;
+}
+
+.card-like > * {
+color:hsl(variables.$clr-primary);
+    font-size:30px;
+    margin-right:1rem;
+}
+
+.filling {
+    position:absolute;
+    top:5px;
+    left:0;
+    transition:.3s;
+    transform:scale(0);
+    transform-origin: bottom;
+}
+
+.card-like:hover .filling {
+    transform:scale(0.9);
+}
+
+/* ---------------------------- */
+/* ----------Footer------------ */
+/* ---------------------------- */
+.main-footer {
+    background-color: variables.$clr-grey-3;
+}
+
+.svg-logo {
+    width:1rem;
+}
+
+.footer-links {
+    margin-top:1rem;
+    --gap:0.5rem;
+}
+
+.footer-links > * {
+    color:white;
+}
+
+.footer-links i {
+    margin-right:1rem;
+}
+
+.fa-hands-helping {
+    font-size:10px
+}
