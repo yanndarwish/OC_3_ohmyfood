@@ -1,0 +1,62 @@
+@use "variables";
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* list style */
+ul {
+    padding-left:0;
+    list-style: none;
+}
+
+/* links style */
+a {
+    text-decoration: none;
+    color:black;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
+
+/* Set up the body */
+body {
+    font-family: variables.$ff-roboto;
+    padding:0;
+}
+
+/* make images easier to work with */
+img, 
+picture {
+    max-width:100%;
+    display:block;
+}
+
+/* make forms elements easier to work with */
+button {
+    font: inherit;
+}
