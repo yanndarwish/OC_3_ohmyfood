@@ -150,3 +150,23 @@
 .fa-check-circle {
     transition:0.3s ease-in-out;
 }
+
+@media (min-width:768px) {
+    .menu-header {
+        justify-content: center;
+        position:relative
+    }
+
+    .menu-main-content .card-like {
+        position:absolute;
+        right:1rem;
+    }
+
+    .menu-main-content .filling {
+        top:-1px;
+    }
+
+    .menu-section {
+        align-items:center;
+    }
+}
