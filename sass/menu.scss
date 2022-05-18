@@ -1,0 +1,152 @@
+@use "variables";
+/* ---------------------------- */
+/* -------Header--------------- */
+/* ---------------------------- */
+
+.fa-arrow-left {
+    position:absolute;
+    top:50%;
+    left:2rem;
+    transform:translateY(-50%);
+    font-size:1.5rem;
+}
+
+.header-img {
+    height:18rem;
+    overflow: hidden;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+}
+
+#delice {
+    background-image: url(./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+}
+
+#palette {
+    background-image: url(./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+}
+
+#enchante {
+    background-image: url(./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+}
+
+#française {
+    background-image: url(./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+}
+/* ---------------------------- */
+/* -------Main content--------- */
+/* ---------------------------- */
+.menu-main-content {
+    background-color: variables.$clr-grey-2;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    margin-top:-5rem;
+    padding-block:2rem;
+    padding-inline:1rem;
+}
+
+.menu-main-content section {
+    padding-block: 2rem;
+}
+
+
+
+/* menu-header */
+
+.menu-header {
+    justify-content: space-between;
+}
+
+.menu-title {
+    font-family: 'Shrikhand', cursive;
+}
+
+/* icon position correction */
+.menu-header .filling {
+    top:0;
+}
+
+/* menu-content */
+
+.menu-section {
+    padding-inline:0;
+    --gap:1rem;
+}
+
+.menu-section-title {
+    font-weight:100;
+    text-transform: uppercase;
+    margin-bottom:.3rem;
+}
+
+.green-underline {
+    background-color: variables.$clr-tertiary;
+    height:3px;
+    width:3rem;
+}
+
+/* item */
+
+.item {
+    position:relative;
+    padding:1rem;
+    overflow:hidden;
+    max-width:30rem;
+    border-radius:1rem;
+    background-color: white;
+}
+
+
+.item-text > * {
+    width:30ch;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    transition:0.3s;
+}
+
+/* item-slide */
+.item-slide {
+    position:absolute;
+    height:100%;
+    top:0;
+    right:-4rem;
+    --gap:0;
+    transition:0.3s;
+}
+
+.item:hover .item-slide {
+    right:0;
+}
+
+.item:hover .item-text > * {
+    width:24ch;
+}
+
+.item:hover .fa-check-circle {
+    transform: rotate(360deg);
+}
+
+.item-price {
+    height:inherit;
+    padding:1rem;
+    align-items: flex-end;
+}
+
+.item-slide-logo {
+    height:inherit;
+    width:4rem;
+    align-items: center;
+    justify-content: center;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+    font-size:1.2rem;
+    color:white;
+    background-color: variables.$clr-tertiary;
+}
+
+.fa-check-circle {
+    transition:0.3s ease-in-out;
+}
