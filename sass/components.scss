@@ -1,0 +1,61 @@
+@use "variables";
+
+/* button */
+.btn {
+    cursor: pointer;
+    width:fit-content;
+    border:none;
+    border-radius: 4rem;
+    padding:1rem 1.5rem;
+    margin-block:1.5rem;
+    color:white;
+    background: linear-gradient(to top, hsl(variables.$clr-primary), variables.$clr-secondary);
+}
+
+/* vignette */
+.vignette {
+    position:relative;
+    padding:1.5rem 2rem;
+    margin-left:.7rem;
+    border-radius: 20px;
+    background-color: variables.$clr-grey-2;
+}
+
+.vignette:hover {
+    background-color: hsla(variables.$clr-primary), .1;
+}
+
+.vignette:hover i {
+    color: hsl(variables.$clr-primary);
+}
+/* vignette-counter */
+.vignette-counter {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateX(-50%) translateY(-50%);
+    width: 1.5rem;
+    aspect-ratio: 1;
+    border-radius:50%;
+    color:white;
+    background-color: hsl(variables.$clr-primary);
+}
+
+/* card */
+.card {
+    position:relative;
+    border-radius:15px;
+    overflow: hidden;
+    background-color:white;
+}
+
+/* badge */
+.badge {
+    position:absolute;
+    top:1rem;
+    right:1rem;
+    padding:0.5rem 1rem;
+    border-radius:.2rem;
+    color: variables.$clr-success;
+    background-color: variables.$clr-bg-success;
+}
