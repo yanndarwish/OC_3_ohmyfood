@@ -9,7 +9,14 @@
     padding:1rem 1.5rem;
     margin-block:1.5rem;
     color:white;
+    box-shadow: variables.$shadow;
     background: linear-gradient(to top, hsl(variables.$clr-primary), variables.$clr-secondary);
+    transition: 0.2s;
+
+    &:hover {
+        background: linear-gradient(to top, lighten(hsl(variables.$clr-primary),15), lighten(variables.$clr-secondary,15));
+        box-shadow: variables.$shadow-dark;
+    }
 }
 
 /* vignette */
@@ -19,9 +26,12 @@
     margin-left:.7rem;
     border-radius: 20px;
     background-color: variables.$clr-grey-2;
+    box-shadow: variables.$shadow;
+    transition: 0.2s;
 
     &:hover {
     background-color: hsla(267, 66%, 60%, 0.2);
+    box-shadow: variables.$shadow-dark;
         
         i {
         color: hsl(variables.$clr-primary);
@@ -47,6 +57,7 @@
     border-radius:15px;
     overflow: hidden;
     background-color:white;
+    box-shadow: variables.$shadow;
 
     .badge {
         position:absolute;
@@ -56,6 +67,11 @@
         border-radius:.2rem;
         color: variables.$clr-success;
         background-color: variables.$clr-bg-success;
+    }
+
+    p {
+        margin-top:0.3rem;
+        color: lighten(variables.$clr-grey-3, 20);
     }
 }
 
@@ -72,6 +88,7 @@
     align-items:center;
     background-color: white;
     animation: display 0s ease-in 3s forwards;
+    
     .loader {
         position: relative;
         width: 80px;
@@ -92,6 +109,7 @@
 }
 @keyframes display {
     100% {
+        z-index:-999;
         opacity:0;
     }
 }
