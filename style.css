@@ -568,6 +568,7 @@ footer {
   }
 
   .item {
+    max-width: 40rem;
     width: 40rem;
   }
   .item .item-text > p {
