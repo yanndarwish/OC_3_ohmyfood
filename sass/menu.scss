@@ -193,8 +193,26 @@
     }
 
     .item {
-        max-width:40rem;
+        width:40rem;
+
+        .item-text > p {
+            width:50ch;
+        }
+    
+        .item-text > h3 {
+            width:35ch;
+        }
+
+        &:hover .item-text > p {
+            width:45ch;
+        }
+        
+        &:hover .item-text > h3 {
+            width:32ch;
+        }
     }
+
+
 }
 
 @keyframes appear {

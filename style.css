@@ -568,7 +568,19 @@ footer {
   }
 
   .item {
-    max-width: 40rem;
+    width: 40rem;
+  }
+  .item .item-text > p {
+    width: 50ch;
+  }
+  .item .item-text > h3 {
+    width: 35ch;
+  }
+  .item:hover .item-text > p {
+    width: 45ch;
+  }
+  .item:hover .item-text > h3 {
+    width: 32ch;
   }
 }
 @keyframes appear {
