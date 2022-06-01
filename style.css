@@ -340,34 +340,30 @@ footer {
 
 @media (min-width: 768px) {
   .main-content:not(.menu-main-content) {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    --gap:2rem;
+    justify-content: center;
   }
 
   .head-section {
-    background-color: white;
-    width: calc((100% - 2rem) / 2);
+    width: 100%;
+    height: calc(100vh - 127px);
+    justify-content: space-evenly;
+  }
+  .head-section h2 {
+    order: 1;
+  }
+  .head-section p {
+    order: 3;
+  }
+  .head-section button {
+    margin-block: 0;
     order: 2;
   }
 
-  .head-section {
-    justify-content: space-between;
-  }
-
-  .head-section button {
-    margin-block: 0;
-  }
-
   .function-section {
-    order: 1;
-    width: calc((100% - 2rem) / 2);
+    width: 60%;
+    margin-inline: auto;
   }
 
-  .restaurant-section {
-    order: 3;
-  }
   .restaurant-section .restaurant-content {
     flex-direction: row;
     flex-wrap: wrap;
@@ -383,17 +379,6 @@ footer {
   }
 }
 @media (min-width: 992px) {
-  .head-section {
-    background-color: white;
-    width: calc((100% - 2rem) / 2);
-    order: 1;
-  }
-
-  .function-section {
-    order: 2;
-    width: calc((100% - 2rem) / 2);
-  }
-
   .restaurant-section .restaurant-content > * {
     max-width: calc((100% - 6rem) / 4);
   }
