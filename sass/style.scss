@@ -1,7 +1,7 @@
-@import "./variables";
-@import "./reset";
-@import "./utility";
-@import "./components";
-@import "./layout";
-@import "./home";
-@import "./menu";
+@import "./utils/variables";
+@import "./base/reset";
+@import "./base/utility";
+@import "./components/components";
+@import "./layout/layout";
+@import "./pages/home";
+@import "./pages/menu";

@@ -89,6 +89,42 @@ button {
   font-weight: 900;
 }
 
+@keyframes display {
+  100% {
+    z-index: -999;
+    opacity: 0;
+  }
+}
+@keyframes loader {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
 /* button */
 .btn {
   cursor: pointer;
@@ -187,42 +223,6 @@ button {
   animation-delay: -0.5s;
 }
 
-@keyframes display {
-  100% {
-    z-index: -999;
-    opacity: 0;
-  }
-}
-@keyframes loader {
-  0% {
-    top: 36px;
-    left: 36px;
-    width: 0;
-    height: 0;
-    opacity: 0;
-  }
-  4% {
-    top: 36px;
-    left: 36px;
-    width: 0;
-    height: 0;
-    opacity: 0;
-  }
-  5% {
-    top: 36px;
-    left: 36px;
-    width: 0;
-    height: 0;
-    opacity: 1;
-  }
-  100% {
-    top: 0px;
-    left: 0px;
-    width: 72px;
-    height: 72px;
-    opacity: 0;
-  }
-}
 section {
   padding: 3rem 1.5rem;
 }
