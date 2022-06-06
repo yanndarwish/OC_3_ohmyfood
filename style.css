@@ -166,7 +166,7 @@ button {
   left: 0;
   transform: translateX(-50%) translateY(-50%);
   width: 1.5rem;
-  aspect-ratio: 1;
+  aspect-ratio: 1/1;
   border-radius: 50%;
   color: white;
   background-color: #9256dc;
