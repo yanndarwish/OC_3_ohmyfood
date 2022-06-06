@@ -29,6 +29,7 @@
         opacity: 1;
     }
     100% {
+        // 0px to keep the circles centered, otherwise it just looks weird
         top: 0px;
         left: 0px;
         width: 72px;
