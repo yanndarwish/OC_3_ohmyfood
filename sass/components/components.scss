@@ -59,6 +59,7 @@
     overflow: hidden;
     background-color:white;
     box-shadow: variables.$shadow;
+    transition: 0.2s;
 
     &:hover {
         box-shadow: variables.$shadow-dark;
