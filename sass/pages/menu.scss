@@ -124,11 +124,11 @@
         --gap:0;
         transition:0.3s;
     }
-    
+    // green div appear here
     &:hover .item-slide {
         right:0;
     }
-    
+    // reduce text div width
     &:hover .item-text > p {
         width:24ch;
     }
@@ -136,7 +136,7 @@
     &:hover .item-text > h3 {
         width:22ch;
     }
-
+    // rotate icon
     &:hover .fa-check-circle {
         transform: rotate(360deg);
     }
