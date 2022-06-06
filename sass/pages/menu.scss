@@ -212,21 +212,10 @@
             width:32ch;
         }
     }
-
-
-}
-
-@keyframes appear {
-    0% {
-        opacity:0;
-        transform:translateY(20px);
-    }
-    100% {
-        opacity:1;
-        transform:translateY(0);
-    }
 }
 
 @for $i from 1 to 10 {
-  .item:nth-of-type(#{$i}) { animation-delay: $i * 0.25s; }
+    .item:nth-of-type(#{$i}) {
+       animation-delay: $i * 0.25s; 
+    }
 }
