@@ -60,6 +60,9 @@
     background-color:white;
     box-shadow: variables.$shadow;
 
+    &:hover {
+        box-shadow: variables.$shadow-dark;
+    }
     .badge {
         position:absolute;
         top:1rem;
